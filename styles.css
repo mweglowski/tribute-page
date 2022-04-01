@@ -9,6 +9,12 @@
 }
 
 body {
+  background-color: #000114;
+}
+
+.content {
+  max-width: 1000px;
+  margin: auto;
   background-color: #000126;
 }
 
@@ -47,9 +53,13 @@ body {
 }
 
 .quote {
-  margin-top: .4em;
+  margin-top: .1em;
   margin-bottom: 3em;
   text-align: center;
+  padding: .3em;
+  background-color: #3232e4;
+  -webkit-box-shadow: 0 0 2em #3232e4;
+          box-shadow: 0 0 2em #3232e4;
   font-size: 1.1em;
   font-style: italic;
 }
@@ -70,6 +80,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 550px;
   margin: 10px;
   padding: .7em;
   background-color: rgba(27, 27, 86, 0.555);
@@ -109,7 +120,7 @@ section .description span {
   color: #7171ff;
 }
 
-section .description .steve-span {
+section .description .beginning-span {
   font-size: 1.2em;
 }
 
