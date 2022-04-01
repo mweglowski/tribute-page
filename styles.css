@@ -54,6 +54,14 @@ body {
   font-style: italic;
 }
 
+hr {
+  margin: 4em 20px;
+  border-radius: 50px;
+  border-width: 2px;
+  color: white;
+  border: 1px solid #1a278a;
+}
+
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,7 +96,7 @@ section .section-title::before {
   background-color: #3232e4;
 }
 
-section .about-description {
+section .description {
   margin: 1.5em 1em .5em 1em;
   font-size: 1.15em;
   text-align: justify;
@@ -97,11 +105,21 @@ section .about-description {
           hyphens: auto;
 }
 
-section .about-description span {
+section .description span {
   color: #7171ff;
 }
 
-section .about-description .steve-span {
+section .description .steve-span {
+  font-size: 1.2em;
+}
+
+.sources {
+  margin-top: 4em;
+  padding: 1em;
+  background-color: #0f0f2b;
+}
+
+.sources .sources-title {
   font-size: 1.2em;
 }
 /*# sourceMappingURL=styles.css.map */
