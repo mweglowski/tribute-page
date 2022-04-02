@@ -16,6 +16,7 @@ body {
   max-width: 1000px;
   margin: auto;
   background-color: #000126;
+  overflow: hidden;
 }
 
 .image-container {
@@ -34,12 +35,13 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   bottom: 0;
-  left: 5%;
   margin: auto;
   text-align: center;
   z-index: 10;
   font-size: 3em;
   color: #d9d9f1;
+  -webkit-animation: slide-up .6s ease-in-out;
+          animation: slide-up .6s ease-in-out;
 }
 
 .title::before {
@@ -50,9 +52,41 @@ body {
   height: 30%;
   z-index: -1;
   background-color: #3232e4;
+  -webkit-animation: slide-right-stripe 1.7s ease-out;
+          animation: slide-right-stripe 1.7s ease-out;
 }
 
-.quote {
+.title .life-time {
+  font-size: .3em;
+}
+
+@-webkit-keyframes slide-right-stripe {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right-stripe {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.title-quote {
   margin-top: .1em;
   margin-bottom: 3em;
   text-align: center;
@@ -62,6 +96,8 @@ body {
           box-shadow: 0 0 2em #3232e4;
   font-size: 1.1em;
   font-style: italic;
+  -webkit-animation: slide-up 2s ease-in-out;
+          animation: slide-up 2s ease-in-out;
 }
 
 hr {
@@ -72,7 +108,7 @@ hr {
   border: 1px solid #1a278a;
 }
 
-section {
+.section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,7 +123,7 @@ section {
   border-radius: 10px;
 }
 
-section .section-title {
+.section .section-title {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -97,7 +133,7 @@ section .section-title {
   font-size: 2em;
 }
 
-section .section-title::before {
+.section .section-title::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -107,7 +143,7 @@ section .section-title::before {
   background-color: #3232e4;
 }
 
-section .description {
+.section .description {
   margin: 1.5em 1em .5em 1em;
   font-size: 1.15em;
   text-align: justify;
@@ -116,21 +152,119 @@ section .description {
           hyphens: auto;
 }
 
-section .description span {
+.section .description span {
   color: #7171ff;
 }
 
-section .description .beginning-span {
+.section .description .beginning-span {
   font-size: 1.2em;
 }
 
+.section .user-svg {
+  width: 2.2em;
+  margin: .8em auto;
+}
+
+.section .death-svg {
+  width: 3.2em;
+  margin: .8em auto;
+}
+
+.steve-quote-div {
+  position: relative;
+  height: 200px;
+  margin-top: 6em;
+  overflow: hidden;
+}
+
+.steve-quote-div .quote {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  width: 50%;
+  font-size: 1.2em;
+}
+
+.steve-quote-div .quote span {
+  position: absolute;
+  bottom: -50%;
+  left: 20%;
+  font-style: italic;
+  color: #b5b5ef;
+}
+
+.steve-quote-div .steve-jobs-quote-img {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+}
+
 .sources {
-  margin-top: 4em;
   padding: 1em;
   background-color: #0f0f2b;
+  -webkit-box-shadow: 0 0 5em #668cf5;
+          box-shadow: 0 0 5em #668cf5;
 }
 
 .sources .sources-title {
   font-size: 1.2em;
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-right {
+  from {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .title .life-time {
+    font-size: .4em;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
