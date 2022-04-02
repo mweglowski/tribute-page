@@ -82,7 +82,8 @@ body {
 }
 
 hr {
-	margin: 4em 20px;
+	width: 80%;
+	margin: 4em auto;
 	border-radius: 50px;
 	border-width: 2px;
 	color: white;
@@ -147,7 +148,7 @@ hr {
 .steve-quote-div {
 	position: relative;
 	height: 200px;
-	margin-top: 6em;
+	margin-top: 4.5em;
 
 	overflow: hidden;
 
@@ -168,7 +169,7 @@ hr {
 		}
 	}
 
-	.steve-jobs-quote-img {
+	.steve-quote-img {
 		position: absolute;
 		bottom: 0;
 		width: 200px;
@@ -183,6 +184,11 @@ hr {
 
 	.sources-title {
 		font-size: 1.2em;
+	}
+	.sources-list {
+		display: flex;
+		flex-direction: column;
+		gap: .2em;
 	}
 }
 
@@ -212,5 +218,74 @@ hr {
 @media screen and (min-width: 400px) {
 	.title .life-time {
 		font-size: .4em;
+	}
+}
+@media screen and (min-width: 570px) {
+	.section {
+		margin: auto;
+	}
+	.steve-quote-div {
+		height: 300px;
+
+		.quote {
+			font-size: 1.5em;
+		}
+		.steve-quote-img {
+			width: 50%;
+		}
+	}
+}
+@media screen and (min-width: 650px) {
+	.steve-quote-div {
+		.steve-quote-img {
+			width: 45%;
+		}
+	}
+}
+@media screen and (min-width: 780px) {
+	.about-section {
+		margin-left: 15%;
+	}
+}
+@media screen and (min-width: 900px) {
+	.death-section {
+		margin-left: 30%;
+	}
+}
+@media screen and (min-width: 710px) {
+	.steve-quote-div {
+		height: 380px;
+		.quote {
+			top: 40%;	
+		}
+		.steve-quote-img {
+			width: 45%;
+		}
+	}
+}
+@media screen and (min-width: 766px) {
+	.steve-quote-div {
+		height: 380px;
+		.quote span {	
+			top: 120%;
+		}
+		.steve-quote-img {
+			width: 45%;
+		}
+	}
+}
+@media screen and (min-width: 910px) {
+	.steve-quote-div {
+		height: 420px;
+		margin-top: 8em;
+		.quote {
+			top: 35%;	
+			span {
+				top: 120%;
+			}
+		}
+		.steve-quote-img {
+			width: 45%;
+		}
 	}
 }
