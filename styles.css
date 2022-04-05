@@ -15,7 +15,7 @@ body {
 .content {
   max-width: 1000px;
   margin: auto;
-  background-color: #000126;
+  background-color: rgba(0, 1, 38, 0.515);
   overflow: hidden;
 }
 
@@ -222,6 +222,53 @@ hr {
   gap: .2em;
 }
 
+.bg-circle {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  width: 3%;
+  height: 80vh;
+  background-color: #181898;
+  border-radius: 50%;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  z-index: -1;
+}
+
+.bg-circle-1 {
+  top: 30%;
+  left: 10%;
+  -webkit-animation: breath 9s infinite;
+          animation: breath 9s infinite;
+}
+
+.bg-circle-2 {
+  top: -10%;
+  left: 90%;
+  -webkit-animation: breath 15s infinite;
+          animation: breath 15s infinite;
+}
+
+.bg-circle-3 {
+  top: 30%;
+  left: 50%;
+  -webkit-animation: breath 12s infinite;
+          animation: breath 12s infinite;
+}
+
+.bg-circle-4 {
+  top: 40%;
+  left: 70%;
+  -webkit-animation: breath 8s infinite;
+          animation: breath 8s infinite;
+}
+
+.bg-circle-5 {
+  top: 10%;
+  -webkit-animation: breath 7s infinite;
+          animation: breath 7s infinite;
+}
+
 @-webkit-keyframes slide-up {
   from {
     -webkit-transform: translateY(20%);
@@ -270,6 +317,30 @@ hr {
   to {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes breath {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes breath {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }

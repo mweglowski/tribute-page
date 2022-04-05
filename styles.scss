@@ -16,7 +16,7 @@ body {
 	max-width: 1000px;
 	margin: auto;
 
-	background-color: rgb(0, 1, 38);
+	background-color: rgba(0, 1, 38, 0.515);
 	overflow: hidden;
 }
 
@@ -192,6 +192,44 @@ hr {
 	}
 }
 
+.bg-circle {
+	position: fixed;
+	top: 10%;
+	left: 0;
+	width: 3%;
+	height: 80vh;
+
+	background-color: rgb(24, 24, 152);
+	border-radius: 50%;
+	filter: blur(30px);
+	z-index: -1;
+}
+.bg-circle-1 {
+	top: 30%;
+	left: 10%;
+	animation: breath 9s infinite;
+}
+.bg-circle-2 {
+	top: -10%;
+	left: 90%;
+	animation: breath 15s infinite;
+}
+.bg-circle-3 {
+	top: 30%;
+	left: 50%;
+	animation: breath 12s infinite;
+}
+.bg-circle-4 {
+	top: 40%;
+	left: 70%;
+	animation: breath 8s infinite;
+}
+.bg-circle-5 {
+	top: 10%;
+	animation: breath 7s infinite;
+}
+
+
 // GLOBAL ANIMATIONS 
 @keyframes slide-up {
 	from {
@@ -210,6 +248,18 @@ hr {
 	}
 	to {
 		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes breath {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
 		opacity: 1;
 	}
 }
